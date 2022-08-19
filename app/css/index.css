@@ -1,0 +1,152 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@500;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "DM Sans", sans-serif;
+  font-weight: 500;
+  font-size: 18px;
+}
+
+img {
+  max-width: 100%;
+}
+
+main {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: hsl(27deg, 66%, 92%);
+}
+
+.bar-chart-container {
+  width: 100%;
+  max-width: 35rem;
+}
+.bar-chart-container .bar-chart-header {
+  background-color: hsl(10deg, 79%, 65%);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 2rem;
+  border-radius: 10px;
+}
+.bar-chart-container .header-text p:nth-of-type(1) {
+  color: hsl(27deg, 66%, 92%);
+  font-size: 1rem;
+}
+.bar-chart-container .header-text p:nth-of-type(2) {
+  color: hsl(33deg, 100%, 98%);
+  font-weight: 700;
+  font-size: 2rem;
+}
+.bar-chart-container .header-img {
+  width: 4rem;
+}
+.bar-chart-container .header-img img {
+  width: 100%;
+}
+
+.bar-chart {
+  background-color: hsl(33deg, 100%, 98%);
+  margin: 1rem 0rem;
+  width: 100%;
+  border-radius: 10px;
+  padding: 2rem;
+}
+.bar-chart .chart-tag {
+  font-size: 2rem;
+  font-weight: 700;
+}
+.bar-chart .chart-column-container {
+  margin-top: 1rem;
+  display: grid;
+  height: 10rem;
+  grid-template-columns: repeat(7, 1fr);
+  column-gap: 1rem;
+}
+.bar-chart .chart-column-container .chart-column {
+  height: 100%;
+  margin: 0 auto;
+  width: 100%;
+  max-width: 3rem;
+}
+.bar-chart .chart-column-container .chart-column .chart-column-bar {
+  height: 80%;
+  border-radius: 5px;
+  display: flex;
+  align-items: flex-end;
+  position: relative;
+}
+.bar-chart .chart-column-container .chart-column .chart-column-bar .chart-column-inner-bar {
+  border-radius: 5px;
+  width: 100%;
+  cursor: pointer;
+}
+.bar-chart .chart-column-container .chart-column .chart-column-bar .info-container {
+  position: absolute;
+  width: 4rem;
+  right: -0.5rem;
+  height: 2rem;
+  border-radius: 4px;
+  background: hsl(25deg, 47%, 15%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.bar-chart .chart-column-container .chart-column .chart-column-bar .info-container .info-text {
+  color: hsl(33deg, 100%, 98%);
+  font-size: 1rem;
+}
+.bar-chart .chart-column-container .chart-column .chart-column-name {
+  height: 20%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.bar-chart .chart-column-container .chart-column .chart-column-name p {
+  font-size: 1rem;
+  text-align: center;
+  color: hsl(28deg, 10%, 53%);
+}
+.bar-chart .divider {
+  margin-top: 2rem;
+  width: 100%;
+  height: 2px;
+  background-color: hsl(28deg, 10%, 53%);
+  opacity: 0.3;
+}
+.bar-chart .bar-chart-footer {
+  margin-top: 2rem;
+}
+.bar-chart .bar-chart-footer .bar-chart-balance-header {
+  color: hsl(28deg, 10%, 53%);
+  font-size: 1rem;
+}
+.bar-chart .bar-chart-footer .bar-chart-balance-info {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.bar-chart .bar-chart-footer .bar-chart-balance-info .bar-chart-balance {
+  font-size: 3rem;
+  color: hsl(25deg, 47%, 15%);
+  font-weight: 700;
+}
+.bar-chart .bar-chart-footer .bar-chart-balance-info .bar-chart-profit {
+  font-size: 1rem;
+}
+.bar-chart .bar-chart-footer .bar-chart-balance-info .bar-chart-profit p:nth-of-type(1) {
+  text-align: right;
+  color: hsl(25deg, 47%, 15%);
+  font-weight: 700;
+}
+.bar-chart .bar-chart-footer .bar-chart-balance-info .bar-chart-profit p:nth-of-type(2) {
+  color: hsl(28deg, 10%, 53%);
+}
+/*# sourceMappingURL=index.css.map */

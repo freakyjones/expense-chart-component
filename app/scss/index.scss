@@ -1,0 +1,140 @@
+// getting all the project variable here
+@import "_variable";
+
+// getting all the base style here
+@import "_base";
+
+main {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: $neutral-cream;
+}
+.bar-chart-container {
+  width: 100%;
+  max-width: 35rem;
+  .bar-chart-header {
+    background-color: $primary-red;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2rem;
+    border-radius: $base-border-radius;
+  }
+  .header-text p:nth-of-type(1) {
+    color: $neutral-cream;
+    font-size: 1rem;
+  }
+  .header-text p:nth-of-type(2) {
+    color: $neutral-orange;
+    font-weight: 700;
+    font-size: 2rem;
+  }
+  .header-img {
+    width: 4rem;
+  }
+  .header-img img {
+    width: 100%;
+  }
+}
+
+.bar-chart {
+  background-color: $neutral-orange;
+  margin: 1rem 0rem;
+  width: 100%;
+  border-radius: $base-border-radius;
+  padding: 2rem;
+  .chart-tag {
+    font-size: 2rem;
+    font-weight: 700;
+  }
+  .chart-column-container {
+    margin-top: 1rem;
+    display: grid;
+    height: 10rem;
+    grid-template-columns: repeat(7, 1fr);
+    column-gap: 1rem;
+
+    .chart-column {
+      height: 100%;
+      margin: 0 auto;
+      width: 100%;
+      max-width: 3rem;
+      .chart-column-bar {
+        height: 80%;
+        border-radius: 5px;
+        display: flex;
+        align-items: flex-end;
+        position: relative;
+        .chart-column-inner-bar {
+          border-radius: 5px;
+          width: 100%;
+          cursor: pointer;
+        }
+        .info-container {
+          position: absolute;
+          width: 4rem;
+          right: -0.5rem;
+          height: 2rem;
+          border-radius: 4px;
+          background: $neutral-dark-brown;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          .info-text {
+            color: $neutral-orange;
+            font-size: 1rem;
+          }
+        }
+      }
+      .chart-column-name {
+        height: 20%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        p {
+          font-size: 1rem;
+          text-align: center;
+          color: $neutral-brown;
+        }
+      }
+    }
+  }
+  .divider {
+    margin-top: 2rem;
+    width: 100%;
+    height: 2px;
+    background-color: $neutral-brown;
+    opacity: 0.3;
+  }
+  .bar-chart-footer {
+    margin-top: 2rem;
+    .bar-chart-balance-header {
+      color: $neutral-brown;
+      font-size: 1rem;
+    }
+    .bar-chart-balance-info {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      .bar-chart-balance {
+        font-size: 3rem;
+        color: $neutral-dark-brown;
+        font-weight: 700;
+      }
+      .bar-chart-profit {
+        font-size: 1rem;
+        p:nth-of-type(1) {
+          text-align: right;
+          color: $neutral-dark-brown;
+          font-weight: 700;
+        }
+        p:nth-of-type(2) {
+          color: $neutral-brown;
+        }
+      }
+    }
+  }
+}
