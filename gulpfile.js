@@ -12,12 +12,14 @@ function buildJs() {
     .pipe(terser())
     .pipe(browserSync.stream({ server: true }));
 }
+
 function buildStyles() {
   return src("app/scss/**/*.scss", { sourcemaps: true })
     .pipe(sass())
     .pipe(dest("app/css", { sourcemaps: "." }))
     .pipe(browserSync.stream({ server: true }));
 }
+
 function watchTask(cb) {
   watch("app/*.html").on("change", browserSync.reload);
   watch("app/js/**/*.js", buildJs);
