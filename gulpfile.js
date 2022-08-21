@@ -22,6 +22,10 @@ function buildHtml() {
     .pipe(dest("dist"));
 }
 
+function buildConstant() {
+  return src("app/constant/**/*.+(json)").pipe(dest("dist/constant"));
+}
+
 function buildImages() {
   return src("app/images/**/*.+(png|jpg|gif|svg)").pipe(dest("dist/images"));
 }
@@ -61,4 +65,4 @@ exports.default = series(
   watchTask
 );
 
-exports.build = series(buildHtml, buildStyles, buildImages);
+exports.build = series(buildHtml, buildStyles, buildImages, buildConstant);
